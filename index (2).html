@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub - Play Now!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🎮 Game Hub</h1>
+            <button id="add-game-btn" class="admin-btn">+ Add Game</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="game-grid" class="game-grid"></div>
+    </main>
+
+    <!-- Modal for adding games -->
+    <div id="game-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Game</h2>
+            <form id="game-form">
+                <input type="text" id="game-title" placeholder="Game Title" required>
+                <input type="url" id="game-url" placeholder="Game URL (iframe embed link)" required>
+                <textarea id="game-description" placeholder="Game Description"></textarea>
+                <input type="text" id="game-image" placeholder="Image URL (thumbnail)">
+                <button type="submit">Add Game</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Game Player Modal -->
+    <div id="player-modal" class="modal">
+        <div class="modal-content player-modal-content">
+            <span class="close">&times;</span>
+            <h2 id="player-title"></h2>
+            <iframe id="game-frame" src="" allowfullscreen="true"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
